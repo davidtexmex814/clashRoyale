@@ -1,0 +1,65 @@
+.fondo  {
+  width: 100%;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("http://clash-royale-the-game.ru/images/media/wallpapers/clash-royale-wallpaper-1920-1080.jpg");
+  background-size: contain;
+  margin-top: -50px;
+}
+form {
+  width: 55vh;
+  display: grid;
+  padding: 1em;
+  background: steelblue;
+  border: 5px solid khaki;
+  /* margin: 2rem auto 0 auto; */
+  border-radius: 30px;
+  padding: 1em;
+  color: #3f3f3f;
+}
+form input {
+  background: #fff;
+  border: 1px solid #9c9c9c;
+  border-radius: 10px;
+}
+form button {
+  background: dodgerblue;
+  padding: 0.7em;
+  width: 100%;
+  border: 0;
+  border-radius: 30px;
+}
+form button:hover {
+  background: khaki;
+}
+
+label {
+  padding: 0.5em 0.5em 0.5em 0;
+}
+input {
+  padding: 0.7em;
+  margin-bottom: 0.5rem;
+}
+input:hover {
+  outline: 7px solid dodgerblue;
+}
+
+@media (min-width: 400px) {
+
+  form {
+    grid-template-columns: 200px 1fr;
+    grid-gap: 16px;
+  }
+
+  label {
+    text-align: right;
+    grid-column: 1 / 2;
+  }
+
+  input,
+  button {
+    grid-column: 2 / 3;
+  }
+}

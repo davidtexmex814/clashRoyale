@@ -1,0 +1,35 @@
+.user :hover {
+    background-color: whitesmoke;
+    color: #FFCC00;
+  }
+  .sesion{
+    color: black;
+    margin: 0px 17px;
+  }
+
+.biemvenido{
+  position: absolute;
+  width: 55vh;
+  display: grid;
+  padding: 1em;
+  background: steelblue;
+  border: 5px solid khaki;
+  border-radius: 30px;
+  padding: 1em;
+  color: #3f3f3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.fondoHome  {
+  width: 100%;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://hdqwalls.com/download/supercell-clash-royale-hd-qhd-2048x1152.jpg");
+  background-size: contain;
+  margin-top: -50px;
+}

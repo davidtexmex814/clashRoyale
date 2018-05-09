@@ -1,0 +1,71 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="user nav navbar-nav navbar-left">
+          <a [routerLink]="['/']">
+            <img style="width:48px" src="https://vignette.wikia.nocookie.net/clashroyale/images/9/92/Gro%C3%9Fer_Champion.png/revision/latest?cb=20170319220234&path-prefix=de">
+          </a>
+        </ul>
+        <ul class="user nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+              <span *ngIf="sessionService.user; else usuarioInactivo">
+                {{sessionService.user.username}}
+              </span>
+              <ng-template #usuarioInactivo> Logearse
+                <img src="https://www.tuexpertoapps.com/wp-content/uploads/2016/09/clash-royale-emotes-01.jpg" style="width:25px">
+              </ng-template>
+            </a>
+            <ul class="dropdown-menu">
+              <div *ngIf="!sessionService.user">
+                <li>
+                  <a class="sesion" [routerLink]="['/signup']">Signup</a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <a class="sesion" [routerLink]="['/login']">Login</a>
+                </li>
+              </div>
+              <div *ngIf="sessionService.user">
+                <li>
+                  <a class="sesion" href="" (click)="sessionService.logout().subscribe()">Log out</a>
+                </li>
+              </div>
+            </ul>
+          </li>
+        </ul>
+        <ul class=" menu nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+              <span *ngIf="sessionService.user">
+                Menu
+              </span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Action</a>
+              </li>
+              <li>
+                <a href="#">Another action</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <!-- <li role="separator" class="divider"></li> -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<router-outlet></router-outlet>
