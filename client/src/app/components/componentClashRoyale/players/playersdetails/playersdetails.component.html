@@ -1,0 +1,29 @@
+<div *ngIf='players'>
+  <div class="fondo">
+    <div class="player">
+      <h1 class="level">Level</h1>
+      <div class="fondoNivel">
+        <p>{{ players.level }}</p>
+      </div>
+      <h1 class="exp">EXP to level up {{players.maxExp}}</h1>
+    </div>
+  
+    <section class="container-fluid">
+      <div class="item-a">Life
+        <br> Points</div>
+      <div class="item-a">Damage Produced</div>
+      <div class="item-a">Shooting Range</div>
+      <div class="item-a">Shooting Speed</div>
+      <div class="item-k">King's Tower</div>
+      <div class="item-c">{{players.kingsTower.hitpoints}}</div>
+      <div class="item-c">{{players.kingsTower.damage}}</div>
+      <div class="item-c">{{players.kingsTower.range}}</div>
+      <div class="item-c">{{players.kingsTower.hitSpeed}}</div>
+      <div class="item-s">Secondary Towers</div>
+      <div class="item-c">{{players.arenaTowers.hitpoints}}</div>
+      <div class="item-c">{{players.arenaTowers.damage}}</div>
+      <div class="item-c">{{players.arenaTowers.range}}</div>
+      <div class="item-c">{{players.arenaTowers.hitSpeed}}</div>
+    </section>
+  </div>
+</div>

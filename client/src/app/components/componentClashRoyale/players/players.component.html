@@ -1,0 +1,7 @@
+<div class="fondo">
+<div *ngFor='let players of players$ | async' class="player" >
+  <a class="hover" [routerLink]="['/players',players._id]">
+    <div class="fondoNivel"><p>{{ players.level }}</p></div>
+  </a>
+  </div>
+</div>

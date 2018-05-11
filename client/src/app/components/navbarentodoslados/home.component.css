@@ -22,14 +22,11 @@
   align-items: center;
 }
 
-
-.fondoHome  {
-  width: 100%;
-  height: 98vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url("https://hdqwalls.com/download/supercell-clash-royale-hd-qhd-2048x1152.jpg");
-  background-size: contain;
-  margin-top: -50px;
+.desplegable{
+    width:  300px;
+    min-height: calc(100vh - 52px);
+    position:  fixed;
+    right:  0;
+    top: 53px;
+    background: brown;
 }

@@ -1,0 +1,10 @@
+
+<div *ngIf='cards' class="container" >
+      <h2>{{ cards.name }}</h2>
+  <img [src]="cards.image" alt="">
+  <h2> Rarity: {{ cards.rarity }}</h2>
+  <h2> Type: {{ cards.type }}</h2>
+  <h2> Elixir Cost: {{ cards.elixirCost }}</h2>
+  <h2> Unlockable In: {{ cards.arena }}</h2>
+  <h2> Description: {{ cards.description }}</h2>
+  </div>

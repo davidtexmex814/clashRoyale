@@ -1,0 +1,11 @@
+<div class="fondo">
+  <div *ngIf='arenas' class="arena">
+    <h2 class="theArena"> Arena {{ arenas.number }}</h2>
+    <h2 class="name">{{ arenas.name }}</h2>
+    <img [src]="arenas.image" alt="">
+  </div>
+  <div class="unlock">
+      <h2> Gold for Victory: {{ arenas.victoryGold }}</h2>
+      <h2> Min Trophies: {{ arenas.minTrophies }}</h2>
+    </div>
+</div>

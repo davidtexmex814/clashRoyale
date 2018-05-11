@@ -1,0 +1,10 @@
+<div class="fondo">
+  <div class="league_container">
+    <div *ngFor='let leagues of leagues$ | async' class="league" >
+      <a [routerLink]="['/leagues',leagues._id]">
+        <h2>{{ leagues.name }}</h2>
+      </a>
+    <img [src]="leagues.image" alt="">
+    </div>
+  </div>
+</div>

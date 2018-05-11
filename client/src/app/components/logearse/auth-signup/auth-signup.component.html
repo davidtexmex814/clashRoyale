@@ -1,5 +1,5 @@
 <div class="fondo">
-    <form class="form1" method="POST" enctype="multipart/form-data" action="">
+    <form class="form1" action="">
     <label for="username" class="first-name">Username</label>
     <input type="text" [(ngModel)]="username" name="username"/>
 
@@ -10,7 +10,7 @@
     <input type="password" [(ngModel)]="password" name="password"/>
 
     <label for="photo">Upload photo</label>
-    <input type="file" [(ngModel)]="img" name="photo" id="myPhoto">
+    <input type="file" name="uploader"  ng2FileSelect [uploader]="uploader" id="myPhoto">
 
     <button (click)="signup()"> Create Account </button>
 </form>

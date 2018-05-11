@@ -1,0 +1,75 @@
+.fondo {
+  width: 100%;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("http://www.survivalgaming.es/wp-content/uploads/2018/01/FONDO-COFRE.png");
+  background-size: contain;
+  margin-top: -50px;
+}
+.level {
+  font-size: 100px;
+  border-radius: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  font-size: 100px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.exp {
+  font-size: 34px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+/* For width smaller than 400px: */
+.fondoNivel {
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  background-image: url("http://cr-api.com/static/img/ui/experience.png");
+  background-repeat: no-repeat;
+}
+.player {
+  margin: -45vh 0px 0px 100px;
+}
+.container-fluid {
+  color: white;
+  margin: 200px 0px 0px 0px;
+  font-size: 40px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 300px 170px 220px 220px 200px;
+  grid-template-rows: 140px 140px;
+  grid-auto-flow: row;
+}
+.item-a, .item-k, .item-s, .item-c {
+  border-radius: 5px;
+  padding: 0 15px;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.item-a{
+    background: rgba(0, 247, 255, 0.5);
+}
+.item-k{
+    background: rgb(93, 166, 235);
+}
+.item-s{
+    background: rgb(5, 143, 255);
+}
+.item-c{
+    background: rgba(0, 110, 255, 0.6);
+}

@@ -1,0 +1,15 @@
+<div class="fondo">
+<div *ngIf='chests' class="chest">
+    <h2 class="arena"> En Arena {{ chests.arena }}</h2>
+    <h2 class="name">{{ chests.name }}</h2>
+  <img [src]="chests.image" alt="">
+  </div>
+  <div class="unlock">
+      <h2> Unlock Time: {{ chests.unlock.time }}</h2>
+      <h2> to Unlock: {{ chests.unlock.gemCost }} gems </h2>
+      <h2> for Buy: {{ chests.gemCost }} gems </h2>
+      <h2> Min Gold: {{ chests.gold.min }}</h2>
+      <h2> Max Gold: {{ chests.gold.max }}</h2>
+      <h2> Number of Cards: {{ chests.cards.number }}</h2>
+  </div>
+</div>

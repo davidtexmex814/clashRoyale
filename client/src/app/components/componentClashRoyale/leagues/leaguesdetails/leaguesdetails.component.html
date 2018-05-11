@@ -1,0 +1,11 @@
+<div class="fondo">
+  <div *ngIf='leagues'>
+      <h2 class="title">{{ leagues.name }}</h2>
+      <img [src]="leagues.image" alt="">
+      <div class="trophies_container">
+        <h2> Gold for Victory: {{ leagues.victoryGold }}</h2>
+        <h2> Min Trophies: {{ leagues.minTrophies }}</h2>
+        <h2> Reset Trophies: {{ leagues.leagueSeasonReset }}</h2>
+      </div>
+  </div>
+</div>

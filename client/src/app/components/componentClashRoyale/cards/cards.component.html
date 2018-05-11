@@ -1,0 +1,10 @@
+<div class="fondo">
+  <div class="card_container">
+    <div *ngFor='let cards of cards$ | async' class="card">
+      <a [routerLink]="['/cards',cards._id]">
+        <h2>{{ cards.name }}</h2>
+      </a>
+      <img [src]="cards.image" alt="">
+    </div>
+  </div>
+</div>

@@ -9,15 +9,5 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  user:any;
-  constructor(public sessionService: SessionService, public router: Router) {
-    this.sessionService.userEvent.subscribe( user => {
-      this.user = user;
-    })
-   }  
-   
-  logout(){
-    this.sessionService.logout().subscribe(() => console.log("logged out"))
-     this.router.navigate(['/'])
-  }
+  constructor(public sessionService: SessionService, public router: Router) {}
 }

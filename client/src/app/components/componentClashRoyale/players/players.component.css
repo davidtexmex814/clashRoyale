@@ -1,0 +1,31 @@
+p{
+    font-size: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* For width smaller than 400px: */
+.fondo {
+    margin-top: -20px;
+    background: url("http://www.survivalgaming.es/wp-content/uploads/2018/01/FONDO-COFRE.png");
+  }
+.fondoNivel {
+    background-size:contain; 
+    background-position:center;
+    width: 400px;
+    background-image: url('http://cr-api.com/static/img/ui/experience.png');
+    background-repeat: no-repeat;
+}
+.player{
+    margin: 100px 0px 0px 0px;
+    display: inline-block;
+}
+a.hover:hover{
+    text-decoration: none;
+}
+
+a :hover{
+    color: black;
+}

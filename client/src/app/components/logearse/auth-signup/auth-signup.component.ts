@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SessionService } from '../../service/session.service';
+import { SessionService } from '../../../service/session.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +11,7 @@ export class AuthSignupComponent implements OnInit {
   username: string;
   name: string;
   password: string;
-  img: string;
+  uploader: string;
 
 
   constructor(public sessionService: SessionService, public router: Router) { }
@@ -24,7 +24,7 @@ export class AuthSignupComponent implements OnInit {
       username: this.username,
       name: this.name,
       password: this.password,
-      img: this.img
+      uploader: this.uploader
     };
     this.sessionService.signup(user).subscribe(() => {
       this.router.navigate(['/'])
