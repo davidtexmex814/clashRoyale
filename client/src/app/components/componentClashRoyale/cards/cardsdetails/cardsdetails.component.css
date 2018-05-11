@@ -1,0 +1,40 @@
+.card {
+  border-radius: 5px;
+  margin: 100px;
+  padding: 0 15px;
+  background: rgba(0, 247, 255, 0.5);
+  color: white;
+  text-align: center;
+}
+.card img {
+  max-width: 40vh;
+}
+.name {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+.unlock {
+  text-align: center;
+  background: rgb(98, 65, 189, 0.7);
+  margin: 10px;
+  padding: 0 15px;
+  color: white;
+}
+.des{
+    background: rgba(0, 133, 241, 0.849);
+    margin: 10px;
+    padding: 0 30px 40px;
+    color: white; 
+
+}
+.fondo {
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("http://www.survivalgaming.es/wp-content/uploads/2018/01/FONDO-COFRE.png");
+  background-size: contain;
+  margin-top: -50px;
+}

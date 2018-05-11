@@ -1,0 +1,9 @@
+<div class="fondo">
+      <div *ngFor='let randomArena of randomArena$ | async' class="randomArena">
+          <h2 class="theArena"> Arena {{ randomArena.number }}</h2>
+        <a [routerLink]="'/randomArena'">
+          <h2 class="name">{{ randomArena.name }}</h2>
+        </a>
+        <img [src]="randomArena.image" alt="">
+      </div>
+</div>

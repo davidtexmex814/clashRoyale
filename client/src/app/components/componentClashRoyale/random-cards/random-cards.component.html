@@ -1,0 +1,10 @@
+<div class="fondo">
+    <div class="randomCard_container">
+      <div *ngFor='let randomCard of randomCards$ | async' class="randomCard">
+        <a [routerLink]="'/randomCards'">
+          <h2>{{ randomCard.name }}</h2>
+        </a>
+        <img [src]="randomCard.image" alt="">
+      </div>
+    </div>
+  </div>

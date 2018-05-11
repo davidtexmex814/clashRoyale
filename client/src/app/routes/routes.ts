@@ -14,6 +14,8 @@ import { ArenasdetailsComponent } from '../components/componentClashRoyale/arena
 import { ChestsdetailsComponent } from '../components/componentClashRoyale/chests/chestsdetails/chestsdetails.component';
 import { PlayersdetailsComponent } from '../components/componentClashRoyale/players/playersdetails/playersdetails.component';
 import { LeaguesdetailsComponent } from '../components/componentClashRoyale/leagues/leaguesdetails/leaguesdetails.component';
+import { RandomCardsComponent } from '../components/componentClashRoyale/random-cards/random-cards.component';
+import { RandomArenasComponent } from '../components/componentClashRoyale/random-arenas/random-arenas.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -21,9 +23,11 @@ export const routes: Routes = [
     { path: 'signup', component: AuthSignupComponent },
     { path: 'login', component: AuthLoginComponent },
     { path: 'cards', component: CardsComponent },
+    { path: 'randomCards', component: RandomCardsComponent },
     { path: 'cards/:id', component: CardsdetailsComponent },
     { path: 'arenas', component: ArenasComponent },
     { path: 'arenas/:id', component: ArenasdetailsComponent },
+    { path: 'randomArena', component: RandomArenasComponent },
     { path: 'chests', component: ChestsComponent },
     { path: 'chests/:id', component: ChestsdetailsComponent },
     { path: 'players', component: PlayersComponent },

@@ -13,7 +13,6 @@ export class CardsComponent implements OnInit {
 
   constructor( private clashService : ClashService, private router: Router ) { 
     this.cards$ = this.clashService.cards();
-
   }
   ngOnInit() {
   }

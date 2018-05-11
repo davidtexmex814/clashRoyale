@@ -1,10 +1,17 @@
+<div class="fondo">
+  <div *ngIf='cards' class="card">
 
-<div *ngIf='cards' class="container" >
-      <h2>{{ cards.name }}</h2>
-  <img [src]="cards.image" alt="">
-  <h2> Rarity: {{ cards.rarity }}</h2>
-  <h2> Type: {{ cards.type }}</h2>
-  <h2> Elixir Cost: {{ cards.elixirCost }}</h2>
-  <h2> Unlockable In: {{ cards.arena }}</h2>
-  <h2> Description: {{ cards.description }}</h2>
+    <h2 class="name">{{ cards.name }}</h2>
+    <img [src]="cards.image" alt="">
+    <div class="des">
+        <h1>Description:</h1>
+          <h2> {{ cards.description }}</h2>
+      </div>
+      <div class="unlock">
+          <h2> Rarity: {{ cards.rarity }}</h2>
+          <h2> Type: {{ cards.type }}</h2>
+          <h2> Elixir Cost: {{ cards.elixirCost }}</h2>
+          <h2> Unlockable In: Arena {{ cards.arena }}</h2>
+        </div>
   </div>
+</div>

@@ -20,12 +20,20 @@ export class ClashService {
     return this.http.get(`${BASEURL}/api/cards/${id}`)
       .map((res) => res.json());
   }
+  randomCards() {
+    return this.http.get(`${BASEURL}/api/randomCards`)
+      .map((res) => res.json());
+  }
   arenas() {
     return this.http.get(`${BASEURL}/api/arenas`)
       .map((res) => res.json());
   }
   arenasdetails(id) {
     return this.http.get(`${BASEURL}/api/arenas/${id}`)
+      .map((res) => res.json());
+  }
+  randomArena() {
+    return this.http.get(`${BASEURL}/api/randomArena`)
       .map((res) => res.json());
   }
   chests() {
