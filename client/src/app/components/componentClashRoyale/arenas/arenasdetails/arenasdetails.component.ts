@@ -9,12 +9,12 @@ import { ClashService } from '../../../../service/clash.service';
 })
 export class ArenasdetailsComponent implements OnInit {
 
-  arenas: any;
+  arenas$: any;
 
   constructor( public route: ActivatedRoute, public router: Router, private clashService : ClashService) {
     route.params.subscribe(params => {
       clashService.arenasdetails(params.id).subscribe(arena => {
-        this.arenas = arena;
+        this.arenas$ = arena;
       });
     });
   }

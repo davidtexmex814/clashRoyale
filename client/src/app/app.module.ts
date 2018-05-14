@@ -25,6 +25,9 @@ import { PlayersdetailsComponent } from './components/componentClashRoyale/playe
 import { RandomCardsComponent } from './components/componentClashRoyale/random-cards/random-cards.component';
 import { FileSelectDirective } from "ng2-file-upload";
 import { RandomArenasComponent } from './components/componentClashRoyale/random-arenas/random-arenas.component';
+import { FilterPipe } from './components/componentClashRoyale/cards/pipes/filter.pipe';
+import { PerfilComponent } from './components/perfil/perfil/perfil.component';
+
 
 @NgModule({
   declarations: [
@@ -45,7 +48,9 @@ import { RandomArenasComponent } from './components/componentClashRoyale/random-
     PlayersdetailsComponent,
     FileSelectDirective,
     RandomCardsComponent,
-    RandomArenasComponent
+    RandomArenasComponent,
+    FilterPipe,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,

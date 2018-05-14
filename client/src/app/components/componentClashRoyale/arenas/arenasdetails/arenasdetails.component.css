@@ -1,13 +1,16 @@
 .arena {
-    border-radius: 5px;
+  border-radius: 20px;
     padding: 0 15px;
     background: rgba(0, 247, 255, 0.5);
     color: white;
+    width: 100vh;
+    height: 62.4vh;
   }
   .arena img {
     max-width: 40vh;
   }
   .theArena{
+    border-radius: 100px;
     background: rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
@@ -20,18 +23,40 @@
   }
   .unlock{
     text-align: center;
-    background: rgba(0, 173, 241, 0.4);
-    margin: -37vh 0px 0px 50px;
-    padding: 0 15px;
-    color: white;
+    border-radius: 10px;
+    margin: -37vh 0px 0px 50vh;
+    width: 34vh;
+    background: rgba(255, 255, 255, 0.2);
+
   }
   .fondo {
     width: 100%;
-    height: 98vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: url("http://www.survivalgaming.es/wp-content/uploads/2018/01/FONDO-COFRE.png");
     background-size: contain;
     margin-top: -50px;
+  }
+  .card_container {
+    display: flex;
+    width: 90%;
+    margin: 0px 0px 0px 100px;
+    flex-wrap: wrap;
+  }
+  .card img {
+    max-width: 100%;
+  }
+  .card {
+    width: 15%;
+    border-radius: 30px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 247, 255, 0.5);
+    padding: 30px;
+    display: inline-block;
   }

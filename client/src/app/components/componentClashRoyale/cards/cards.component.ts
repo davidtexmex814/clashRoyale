@@ -9,10 +9,11 @@ import { ClashService } from '../../../service/clash.service';
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
-  cards$: Observable <any>;
+  cards: Observable <any>;
+  
 
   constructor( private clashService : ClashService, private router: Router ) { 
-    this.cards$ = this.clashService.cards();
+    this.cards = this.clashService.cards();
   }
   ngOnInit() {
   }

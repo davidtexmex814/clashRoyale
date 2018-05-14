@@ -1,6 +1,79 @@
 <div class="fondo">
+  <div class="searchname">
+    <div>
+      <h1>Search Cards</h1>
+      <input placeholder="Busca Tu Carta" type="text" [(ngModel)]="name">
+    </div>
+  </div>
+    <div class="searchrarity">
+      <div>
+        <h1>Rarity</h1>
+        <select [(ngModel)]="rarity">
+          <option value="">All</option>
+          <option value="common">Common</option>
+          <option value="rare">Rare</option>
+          <option value="epic">Epic</option>
+          <option value="legendary">Lengendary</option>
+        </select>
+      </div>
+    </div>
+    <div class="searchtype">
+      <div>
+        <h1>Type</h1>
+        <select [(ngModel)]="type">
+          <option value="">All</option>
+          <option value="troop">Troop</option>
+          <option value="building">Building</option>
+          <option value="spell">Spell</option>
+        </select>
+      </div>
+    </div>
+    <!-- <div class="filter">
+        <div>
+          <h1>FILTER</h1>
+        </div>
+    </div> -->
+  <!-- <div class="searcharena">
+    <div>
+      <h1>Filter Arena</h1>
+      <select [(ngModel)]="arena">
+        <option value="">All</option>
+        <option value="0">Arena 0</option>
+        <option value="1">Arena 1</option>
+        <option value="2">Arena 2</option>
+        <option value="3">Arena 3</option>
+        <option value="4">Arena 4</option>
+        <option value="5">Arena 5</option>
+        <option value="6">Arena 6</option>
+        <option value="7">Arena 7</option>
+        <option value="8">Arena 8</option>
+        <option value="9">Arena 9</option>
+        <option value="10">Arena 10</option>
+        <option value="11">Arena 11</option>
+      </select>
+    </div>
+  </div> -->
+  <div class="searchelixir">
+    <div>
+      <h1>ElixirCost</h1>
+      <select [(ngModel)]="elixirCost">
+          <option value="">All</option>
+          <option value="0">Cost 0</option>
+          <option value="1">Cost 1</option>
+          <option value="2">Cost 2</option>
+          <option value="3">Cost 3</option>
+          <option value="4">Cost 4</option>
+          <option value="5">Cost 5</option>
+          <option value="6">Cost 6</option>
+          <option value="7">Cost 7</option>
+          <option value="8">Cost 8</option>
+          <option value="9">Cost 9</option>
+      </select>
+    </div>
+  </div>
   <div class="card_container">
-    <div *ngFor='let cards of cards$ | async' class="card">
+    <div *ngFor="let cards of cards | async | filter:'name':name | filter:'elixirCost': elixirCost | filter:'rarity':rarity | filter:'type':type"
+      class="card">
       <a [routerLink]="['/cards',cards._id]">
         <h2>{{ cards.name }}</h2>
       </a>

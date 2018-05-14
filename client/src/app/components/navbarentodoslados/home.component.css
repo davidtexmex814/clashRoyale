@@ -1,13 +1,19 @@
+.menu :hover {
+  color: #ffcc00;
+  transition-duration: 0.8s;
+}
 .user :hover {
-    background-color: whitesmoke;
-    color: #FFCC00;
-  }
-  .sesion{
-    color: black;
-    margin: 0px 17px;
-  }
-
-.biemvenido{
+  color: #ffcc00;
+  transition-duration: 0.8s;
+}
+.sesion {
+  color: black;
+  margin: 0px 17px;
+}
+.logo :hover {
+  background: white;
+}
+.biemvenido {
   position: absolute;
   width: 55vh;
   display: grid;
@@ -22,11 +28,45 @@
   align-items: center;
 }
 
-.desplegable{
-    width:  300px;
-    min-height: calc(100vh - 52px);
-    position:  fixed;
-    right:  0;
-    top: 53px;
-    background: brown;
+.dropdown .desplegable {
+  margin-right: -300px;
+}
+.dropdown.open .desplegable {
+  margin-right: 0;
+}
+.desplegable {
+  
+  width: 300px;
+  transition: all 2s linear;
+  /* width: 300px; */
+  min-height: calc(100vh - 52px);
+  position: fixed;
+  right: 0;
+  top: 53px;
+  background: rgba(21, 123, 240, 0.8);
+  padding: 10px 20px;
+  line-height: 1.2em;
+  color: #fff;
+  border-left: 1px solid #595959;
+}
+
+.desplegarandom {
+  width: 250px;
+  min-height: calc(15vh - 52px);
+  position: fixed;
+  right: 0;
+  top: 53px;
+  background: rgba(21, 123, 240, 0.8);
+  padding: 10px 20px;
+  line-height: 1.2em;
+  color: #fff;
+  border-left: 1px solid #595959;
+}
+
+.nav a:hover {
+  text-decoration: none;
+  background: #595959;
+}
+.nav li ul {
+  background: rgba(39, 55, 84, 1);
 }

@@ -16,12 +16,14 @@ import { PlayersdetailsComponent } from '../components/componentClashRoyale/play
 import { LeaguesdetailsComponent } from '../components/componentClashRoyale/leagues/leaguesdetails/leaguesdetails.component';
 import { RandomCardsComponent } from '../components/componentClashRoyale/random-cards/random-cards.component';
 import { RandomArenasComponent } from '../components/componentClashRoyale/random-arenas/random-arenas.component';
+import { PerfilComponent } from '../components/perfil/perfil/perfil.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: '', component: FondohomeComponent },
     { path: 'signup', component: AuthSignupComponent },
     { path: 'login', component: AuthLoginComponent },
+    { path: 'perfil/:id', component: PerfilComponent },
     { path: 'cards', component: CardsComponent },
     { path: 'randomCards', component: RandomCardsComponent },
     { path: 'cards/:id', component: CardsdetailsComponent },

@@ -1,29 +1,104 @@
 .fondo {
-    margin-top: -20px;
-    background: url("http://www.survivalgaming.es/wp-content/uploads/2018/01/FONDO-COFRE.png");
-    height: 780vh;
-  }
-  h2 {
-    text-align: center;
-  }
-  .card_container {
-    display: flex;
-    width: 90%;
-    margin: 0px 0px 0px 100px;
-    flex-wrap: wrap;
-  }
-  .card img {
-    max-width: 100%;
-  }
-  .card {
-    width: 19%;
-    border-radius: 5px;
-    margin: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: rgba(0, 247, 255, 0.5);
-    padding: 30px;
-    display: inline-block;
-  }
+  margin-top: -20px;
+  background: url("http://www.survivalgaming.es/wp-content/uploads/2018/01/FONDO-COFRE.png");
+  height: 810vh;
+}
+h2 {
+  text-align: center;
+}
+.card_container {
+  display: flex;
+  width: 90%;
+  margin: 0px 0px 0px 100px;
+  flex-wrap: wrap;
+}
+.card img {
+  max-width: 100%;
+}
+.card {
+  width: 19%;
+  border-radius: 30px;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 247, 255, 0.5);
+  padding: 30px;
+  display: inline-block;
+}
+h1 {
+  color: white;
+}
+input {
+  text-align: center;
+  width: 70vh;
+}
+.searchname {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 93vh;
+  border-radius: 50px;
+  margin: 0px 0px 0px 42.5vh;
+  background: rgba(255, 255, 255, 0.242);
+  padding: 30px;
+}
+/* .filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 31vh;
+  height: 16.5vh;
+  border-radius: 50px;
+  margin: -16.5vh 0px 0px 73.5vh;
+  background: rgba(247, 247, 247, 0.4);
+  padding: 30px;
+} */
+.searchrarity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 31vh;
+  border-radius: 50px;
+  margin: 0px 0px 0px 73.7vh;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+.searchtype {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 31vh;
+  border-radius: 50px;
+  margin: -16.5vh 0px 0px 42.5vh;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+/* .searcharena {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 31vh;
+  border-radius: 50px;
+  margin: -16.5vh 0px 0px 104.5vh;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+} */
+.searchelixir {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 31vh;
+  height: 16.5vh;
+  border-radius: 50px;
+  margin: -16.5vh 0px 0px 104.8vh;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}

@@ -1,108 +1,112 @@
-
 <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-          aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="user nav navbar-nav navbar-left">
-          <a [routerLink]="['/']">
-            <img style="width:48px" src="https://vignette.wikia.nocookie.net/clashroyale/images/9/92/Gro%C3%9Fer_Champion.png/revision/latest?cb=20170319220234&path-prefix=de">
-          </a>
-        </ul>
-        <ul class="user nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="" class="dropdown-toggle" data-toggle="dropdown">
-              <span *ngIf="sessionService.user; else usuarioInactivo">
-                {{sessionService.user.username}}
-              </span>
-              <ng-template #usuarioInactivo> Logearse
-                <img src="https://www.tuexpertoapps.com/wp-content/uploads/2016/09/clash-royale-emotes-01.jpg" style="width:25px">
-              </ng-template>
-            </a>
-            <ul class="dropdown-menu">
-              <div *ngIf="!sessionService.user">
-                <li>
-                  <a class="sesion" [routerLink]="['/signup']">Signup</a>
-                </li>
-                <li role="separator" class="divider"></li>
-                <li>
-                  <a class="sesion" [routerLink]="['/login']">Login</a>
-                </li>
-              </div>
-              <div *ngIf="sessionService.user">
-                <li>
-                  <a class="sesion" href="" (click)="sessionService.logout().subscribe()">Log out</a>
-                </li>
-              </div>
-            </ul>
-          </li>
-        </ul>
-        <ul class=" menu nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown">
-                <span *ngIf="sessionService.user" type="button" data-toggle="modal" data-target="#myModal">
-                  Menu
-                </span>
-              </a>
-              <ul class="desplegable dropdown-menu" >
-                <div *ngIf="sessionService.user">
-                  <li>
-                    <a class="sesion" [routerLink]="['/cards']">Cards</a>
-                  </li>
-                  <li role="separator" class="divider"></li>
-                  <li>
-                    <a class="sesion" [routerLink]="['/arenas']">Arenas</a>
-                  </li>
-                  <li role="separator" class="divider"></li>
-                  <li>
-                    <a class="sesion" [routerLink]="['/chests']">Chests</a>
-                  </li>
-                  <li role="separator" class="divider"></li>
-                  <li>
-                    <a class="sesion" [routerLink]="['/leagues']">Leagues</a>
-                  </li>
-                  <li role="separator" class="divider"></li>
-                  <li>
-                    <a class="sesion" [routerLink]="['/players']">Levels</a>
-                  </li>
-                  <li role="separator" class="divider"></li>
-                </div>
-                <!-- <li role="separator" class="divider"></li> -->
-              </ul>
-            </li>
-          </ul>
-        <ul class=" menu nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown">
-              <span *ngIf="sessionService.user" type="button" data-toggle="modal" data-target="#myModal">
-                Random
-              </span>
-            </a>
-            <ul class="desplegable dropdown-menu" >
-              <div *ngIf="sessionService.user">
-                <li>
-                  <a class="sesion" [routerLink]="['/randomCards']">RandomCards</a>
-                </li>
-                <li role="separator" class="divider"></li>
-                <li>
-                  <a class="sesion" [routerLink]="['/randomArena']">RandomArena</a>
-                </li>
-                <li role="separator" class="divider"></li>
-              </div>
-              <!-- <li role="separator" class="divider"></li> -->
-            </ul>
-          </li>
-        </ul>
-      </div>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
     </div>
-  </nav>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="logo nav navbar-nav navbar-left">
+        <a [routerLink]="['/']">
+          <img style="width:48px" src="https://vignette.wikia.nocookie.net/clashroyale/images/9/92/Gro%C3%9Fer_Champion.png/revision/latest?cb=20170319220234&path-prefix=de">
+        </a>
+      </ul>
+      <ul class="user nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <span *ngIf="sessionService.user; else usuarioInactivo">
+              {{sessionService.user.username}}
+            </span>
+            <ng-template #usuarioInactivo> Logearse
+              <img src="https://www.tuexpertoapps.com/wp-content/uploads/2016/09/clash-royale-emotes-01.jpg" style="width:25px">
+            </ng-template>
+          </a>
+          <ul class="dropdown-menu">
+            <div *ngIf="!sessionService.user">
+              <li>
+                <a class="sesion" [routerLink]="['/signup']">Signup</a>
+              </li>
+              <li role="separator" class="divider"></li>
+              <li>
+                <a class="sesion" [routerLink]="['/login']">Login</a>
+              </li>
+            </div>
+            <div *ngIf="sessionService.user">
+              <li>
+                <a class="sesion" [routerLink]="['/perfil', sessionService.user._id]">Perfil</a>
+              </li>
+              <li role="separator" class="divider"></li>
+              <li>
+                <a class="sesion" href="" (click)="sessionService.logout().subscribe()">Log out</a>
+              </li>
+            </div>
+          </ul>
+        </li>
+      </ul>
+      <ul class=" menu nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <span *ngIf="sessionService.user">
+              <!-- type="button" data-toggle="modal" data-target="#myModal" -->
+              Menu
+            </span>
+          </a>
+          <ul class="desplegable dropdown-menu">
+            <div *ngIf="sessionService.user">
+              <li>
+                <a class="sesion" [routerLink]="['/cards']">Cards</a>
+              </li>
+              <li role="separator" class="divider"></li>
+              <li>
+                <a class="sesion" [routerLink]="['/arenas']">Arenas</a>
+              </li>
+              <li role="separator" class="divider"></li>
+              <li>
+                <a class="sesion" [routerLink]="['/chests']">Chests</a>
+              </li>
+              <li role="separator" class="divider"></li>
+              <li>
+                <a class="sesion" [routerLink]="['/leagues']">Leagues</a>
+              </li>
+              <li role="separator" class="divider"></li>
+              <li>
+                <a class="sesion" [routerLink]="['/players']">Levels</a>
+              </li>
+              <li role="separator" class="divider"></li>
+            </div>
+            <!-- <li role="separator" class="divider"></li> -->
+          </ul>
+        </li>
+      </ul>
+      <ul class=" menu nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <span *ngIf="sessionService.user">
+              Random
+            </span>
+          </a>
+          <ul class="desplegarandom dropdown-menu">
+            <div *ngIf="sessionService.user">
+              <li>
+                <a class="sesion" [routerLink]="['/randomCards']">RandomCards</a>
+              </li>
+              <li role="separator" class="divider"></li>
+              <li>
+                <a class="sesion" [routerLink]="['/randomArena']">RandomArena</a>
+              </li>
+              <li role="separator" class="divider"></li>
+            </div>
+            <!-- <li role="separator" class="divider"></li> -->
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <!-- <script>$('#myModal').on('shown.bs.modal', function () {
     $('#myInput').focus()
@@ -110,13 +114,15 @@
   </script> -->
 
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        </div>
+<!-- Modal -->
+<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
     </div>
   </div>
+</div> -->

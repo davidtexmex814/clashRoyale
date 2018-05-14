@@ -5,7 +5,48 @@
     justify-content: center;
     align-items: center;
     background: url("https://hdqwalls.com/download/supercell-clash-royale-hd-qhd-2048x1152.jpg");
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     margin-top: -50px;
   }
-  
+.todoCarousel{
+  margin-top: -22px;
+}
+  .carousel-inner .intro {
+    width: 100%;
+}
+.carousel-inner .campo {
+  position: absolute;
+  margin: 30px 0px 0px 17vh;
+  width: 150vh;
+  height: 70vh;
+}
+.carousel-inner .fondoCarousel {
+  width: 200vh;
+  height: 94vh;
+}
+.carousel-caption {
+    font-size: 20px;
+}
+.carousel-control {
+    margin: 144px 0px 0px 0px;
+    height: 60vh;
+    width: 30px;
+   background: rgba(253, 215, 1, 0.4);
+   border-radius: 100px;
+  } 
+iframe{
+  position: absolute;
+  margin: 150px 0px 0px 38vh;
+  width: 60%;
+  height: 60%;
+}
+.tutorial{
+  position: absolute;
+  font-style: italic;
+  font-family:'Helvetica','Verdana','Monaco',sans-serif;
+  color: white;
+  font-size: 100px;
+  margin: 0px 0px 0px 64vh;
+  border-block-end: 2px solid white;
+}
