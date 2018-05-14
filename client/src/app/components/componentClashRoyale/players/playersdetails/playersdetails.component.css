@@ -29,6 +29,7 @@ p {
   justify-content: center;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.2);
+  width: 38vh;
   color: white;
 }
 /* For width smaller than 400px: */
@@ -44,7 +45,7 @@ p {
 }
 .container-fluid {
   color: white;
-  margin: 200px 0px 0px 0px;
+  margin: 220px 0px 0px -200px;
   font-size: 40px;
   display: grid;
   justify-content: center;

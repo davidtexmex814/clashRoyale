@@ -10,7 +10,7 @@ p{
 .fondo {
     margin-top: -20px;
     background: url("http://www.survivalgaming.es/wp-content/uploads/2018/01/FONDO-COFRE.png");
-  }
+}
 .fondoNivel {
     background-size:contain; 
     background-position:center;
@@ -20,6 +20,7 @@ p{
 }
 .player{
     margin: 100px 0px 0px 0px;
+    padding: 0px 35px;
     display: inline-block;
 }
 a.hover:hover{
