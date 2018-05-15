@@ -1,7 +1,7 @@
 .fondo {
     margin-top: -20px;
     background: url("http://www.survivalgaming.es/wp-content/uploads/2018/01/FONDO-COFRE.png");
-    height: 100vh;
+    height: 110vh;
   }
   h2 {
     text-align: center;
@@ -9,7 +9,7 @@
   .randomCard_container {
     display: flex;
     width: 90%;
-    margin: 0px 0px 0px 250px;
+    margin: 0px 0px 0px 200px;
     flex-wrap: wrap;
   }
   .randomCard img {

@@ -18,6 +18,11 @@ router.get("/api/cards", (req, res, next) => {
 router.get("/api/cards/:id", (req, res, next) => {
   clashapi.cards(req.params.id).then(result => {
     const name = result.idName;
+    result.life =  result.order + result._id.replace(/[^1-9.]/g,'').slice(10,11) + 2;   
+    result.damage =  result.order + result._id.replace(/[^1-9.]/g,'').slice(9,11);
+    result.order = result.order.toString();
+    result.order = result.order.slice(0,1);
+    result.attackSpeed = 0 + "." + ( result.elixirCost *  result.order).toString().split("");
     result.image = `http://www.clashapi.xyz/images/cards/${name}.png`;
     res.json(result);
   });
