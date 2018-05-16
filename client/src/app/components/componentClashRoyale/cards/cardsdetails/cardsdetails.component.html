@@ -14,6 +14,14 @@
       <h2> Damage: {{ cards.damage }}</h2>
       <h2> Attack Speed: {{ cards.attackSpeed }}</h2>
       <h2> Unlockable In: Arena {{ cards.arena }}</h2>
+      <h2 class="dead">I lost almost all my life due to my own attack, my remaining life is
+        <div *ngIf="cards.attackMe">
+          ( {{cards.attackMe}} )
+        </div>
+        <div *ngIf="!cards.attackMe">
+          ( I Have Died )
+        </div>
+      </h2>
     </div>
   </div>
 </div>

@@ -18,12 +18,20 @@ router.get("/api/cards", (req, res, next) => {
 router.get("/api/cards/:id", (req, res, next) => {
   clashapi.cards(req.params.id).then(result => {
     const name = result.idName;
-    result.life =  result.order + result._id.replace(/[^1-9.]/g,'').slice(10,11) + 2;   
-    result.damage =  result.order + result._id.replace(/[^1-9.]/g,'').slice(9,11);
+    result.life = result.order + result._id.replace(/[^1-9.]/g, "").slice(10, 11) + 2;
+    result.damage = result.order + result._id.replace(/[^1-9.]/g, "").slice(9, 11);
     result.order = result.order.toString();
-    result.order = result.order.slice(0,1);
-    result.attackSpeed = 0 + "." + ( result.elixirCost *  result.order).toString().split("");
+    result.order = result.order.slice(0, 1);
+    result.attackSpeed = 0 + "." + (result.elixirCost * result.order).toString().split("");
     result.image = `http://www.clashapi.xyz/images/cards/${name}.png`;
+    if(result.life > result.damage){
+    const receiveDamage = c => {
+      return c.attackMe = c.life - c.damage;
+    }
+    result.attackMe = [];
+      result.attackMe.push(receiveDamage(result));
+      result.attackMe = result.attackMe.toString();
+  }
     res.json(result);
   });
 });
@@ -84,11 +92,11 @@ router.get("/api/arenas/:id", (req, res, next) => {
     result.image = `http://www.clashapi.xyz/images/arenas/${name}.png`;
 
     Promise.all(result.cardUnlocks.map(c => card(c)))
-    .then(x => {
-      result.cardUnlocks = x;
-      res.json(result);
-    })
-    .catch(e => res.status(500).json({message:e.message}));
+      .then(x => {
+        result.cardUnlocks = x;
+        res.json(result);
+      })
+      .catch(e => res.status(500).json({ message: e.message }));
   });
 });
 
@@ -99,7 +107,6 @@ const card = c => {
     return result;
   });
 };
-
 
 router.get("/api/randomArena", (req, res, next) => {
   clashapi.arenas().then(result => {
