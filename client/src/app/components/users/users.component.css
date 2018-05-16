@@ -1,0 +1,43 @@
+.fondo {
+    margin-top: -20px;
+    background: url("http://www.survivalgaming.es/wp-content/uploads/2018/01/FONDO-COFRE.png");
+    height: 870vh;
+  }
+  h2 {
+    text-align: center;
+  }
+  .users_container {
+    display: flex;
+    width: 90%;
+    margin: 0px 0px 0px 100px;
+    flex-wrap: wrap;
+  }
+  .user img {
+    max-width: 100%;
+  }
+  .user {
+    width: 13%;
+    border-radius: 30px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 247, 255, 0.5);
+    padding: 30px;
+    display: inline-block;
+  }
+  h1 {
+    color: white;
+  }
+  .searchuser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 93vh;
+    border-radius: 50px;
+    margin: 0px 0px 0px 42.5vh;
+    background: rgba(255, 255, 255, 0.242);
+    padding: 30px;
+  }

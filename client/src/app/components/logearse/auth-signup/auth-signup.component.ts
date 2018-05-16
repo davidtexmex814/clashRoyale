@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SessionService } from '../../../service/session.service';
 import { Router } from '@angular/router';
+import{ FileUploader } from 'ng2-file-upload';
 
 @Component({
   selector: 'app-auth-signup',
@@ -8,10 +9,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./auth-signup.component.css']
 })
 export class AuthSignupComponent implements OnInit {
+  BASEURL = 'http://localhost:3000'
+  uploader: FileUploader = new FileUploader({
+    url: `${this.BASEURL}/routes/auth/signup`
+  });
   username: string;
   name: string;
   password: string;
-  uploader: string;
 
 
   constructor(public sessionService: SessionService, public router: Router) { }
@@ -20,14 +24,16 @@ export class AuthSignupComponent implements OnInit {
   }
 
   signup() {
-    const user = {
-      username: this.username,
-      name: this.name,
-      password: this.password,
-      uploader: this.uploader
+    this.uploader.onBuildItemForm = (item, form) => {
+      form.append('username', this.username);
+      form.append('password', this.password);
+      form.append('name', this.name);
+
     };
-    this.sessionService.signup(user).subscribe(() => {
-      this.router.navigate(['/'])
-    })
+
+    this.uploader.uploadAll();
+    this.uploader.onCompleteItem = () => {
+      this.router.navigate(['/login']);
+    }
   }
 }

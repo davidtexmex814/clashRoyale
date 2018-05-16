@@ -6,8 +6,11 @@
   color: #ffcc00;
   transition-duration: 0.8s;
 }
+.users{
+  color: grey;
+}
 .sesion {
-  color: black;
+  color: white;
   margin: 0px 17px;
 }
 .logo :hover {

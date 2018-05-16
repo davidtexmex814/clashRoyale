@@ -1,19 +1,20 @@
 const express = require("express");
 const auth = express.Router();
 const passport = require("passport");
-const User = require("../models/user");
+const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
 const ensureLogin = require("connect-ensure-login");
 const multer = require("multer");
 const uploadCloud = require("../config/cloudinary.js");
 
-auth.post("/signup", uploadCloud.single("photo"), (req, res, next) => {
+auth.post("/signup", uploadCloud.single("file"), (req, res, next) => {
+  console.log("hola");
   let username = req.body.username;
   let password = req.body.password;
   let name = req.body.name;
-  let img = req.body.img;
-  // let img = req.file.url;
+  // let img = req.body.img;
+  let img = req.file.url;
 
   if (!username || !password ) {
     res.status(400).json({ message: "Provide all the fields to sign up" });
@@ -32,8 +33,7 @@ auth.post("/signup", uploadCloud.single("photo"), (req, res, next) => {
       username,
       password: hashPass,
       name,
-      img: req.body.img
-      // img: req.file.url
+      img: req.file.url
     });
 
     newUser.save(err => {
@@ -83,6 +83,16 @@ auth.get("/loggedin", (req, res) => {
 
 auth.get("/perfil/:id", (req, res, next) => {
   User.findById(req.params.id)
+  .then(user => {
+      user
+    res.json(user);
+  })
+  .catch(err => {
+    next(err);
+  });
+});
+auth.get("/users", (req, res, next) => {
+  User.find()
   .then(user => {
       user
     res.json(user);

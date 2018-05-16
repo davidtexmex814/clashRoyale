@@ -1,6 +1,20 @@
 <div class="fondo">
-  <div *ngIf='user' class="user">
-    <h2 class="userName">{{ user.username }}</h2>
+  <div *ngIf="user" class="user">
+    <h2 class="userName">{{user.username}}</h2>
     <h2 class="nameReal">{{ user.name }}</h2>
+    <h2 class="img">
+      <img src="{{ user.img }}" alt="">
+    </h2>
   </div>
+    <!-- <ul *ngFor="let comment of comments">
+            <li>{{comment.text}}</li>
+            <button (click)="removeMessages()"> Delete </button>
+    </ul>
+  <div>
+    <input [(ngModel)]="comment">
+    <button (click)="saveMessages()"> Save Messages </button>
+  </div> -->
 </div>
+
+
+<!-- {{comment.sender_id.username}}: -->

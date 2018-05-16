@@ -10,6 +10,7 @@ const BASEURL = "http://localhost:3000";
 @Injectable()
 export class SessionService {
   user: any;
+  mensaje: any;
   userEvent: EventEmitter<any> = new EventEmitter();
   options: any = { withCredentials: true };
 
@@ -25,7 +26,11 @@ export class SessionService {
     this.userEvent.emit(this.user);
     return this.user;
   }
-
+  messages(mensaje) {
+    return this.http
+      .post(`${BASEURL}/routes/messages/users`, mensaje)
+      .map(res => res.json())
+  }
   signup(user) {
     return this.http
       .post(`${BASEURL}/routes/auth/signup`, user, this.options)
@@ -60,4 +65,15 @@ export class SessionService {
       .get(`${BASEURL}/routes/auth/perfil/${id}`)
       .map(res => res.json());
   }
+  userr() {
+    return this.http
+      .get(`${BASEURL}/routes/auth/users`)
+      .map(res => res.json())
+  }
+  // messages(id) {
+  //   return this.http
+  //     .get(`${BASEURL}/routes/auth/perfil/${id}`)
+  //     .map(res => res.json())
+  // }
+
 }

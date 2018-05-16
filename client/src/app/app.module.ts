@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { SessionService } from "./service/session.service";
+import { ClashService } from './service/clash.service';
+// import { CommentService } from './service/comment.service';
+
 import { RouterModule } from "@angular/router";
 import { routes } from './routes/routes';
 
@@ -12,7 +15,6 @@ import { AuthSignupComponent } from './components/logearse/auth-signup/auth-sign
 import { HomeComponent } from './components/navbarentodoslados/home.component';
 import { FondohomeComponent } from './components/fondohome/fondohome.component';
 import { CardsComponent } from './components/componentClashRoyale/cards/cards.component';
-import { ClashService } from './service/clash.service';
 import { ArenasComponent } from './components/componentClashRoyale/arenas/arenas.component';
 import { LeaguesComponent } from './components/componentClashRoyale/leagues/leagues.component';
 import { ChestsComponent } from './components/componentClashRoyale/chests/chests.component';
@@ -27,7 +29,7 @@ import { FileSelectDirective } from "ng2-file-upload";
 import { RandomArenasComponent } from './components/componentClashRoyale/random-arenas/random-arenas.component';
 import { FilterPipe } from './components/componentClashRoyale/cards/pipes/filter.pipe';
 import { PerfilComponent } from './components/perfil/perfil/perfil.component';
-
+import { UsersComponent } from './components/users/users.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,8 @@ import { PerfilComponent } from './components/perfil/perfil/perfil.component';
     RandomCardsComponent,
     RandomArenasComponent,
     FilterPipe,
-    PerfilComponent
+    PerfilComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
