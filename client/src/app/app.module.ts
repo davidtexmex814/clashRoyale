@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { SessionService } from "./service/session.service";
 import { ClashService } from './service/clash.service';
-// import { CommentService } from './service/comment.service';
+import { CommentService } from './service/comment.service';
 
 import { RouterModule } from "@angular/router";
 import { routes } from './routes/routes';
@@ -61,7 +61,7 @@ import { UsersComponent } from './components/users/users.component';
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [SessionService, ClashService],
+  providers: [SessionService, ClashService, CommentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

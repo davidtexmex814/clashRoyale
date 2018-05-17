@@ -58,10 +58,10 @@ app.use("/", clash);
 const auth = require("./routes/auth");
 app.use("/routes/auth", auth);
 
-// const User = require('./models/User');
-// const Messages = require('./models/Messages')
+const User = require('./models/User');
+const Messages = require('./models/Messages')
 // // app.use('/routes/crud', require('./routes/crud')(Messages));
-// app.use('/routes/messages', require('./routes/extendMessages'));
+app.use('/routes/messages', require('./routes/extendMessages'));
 
 app.use(function(req, res) {
   res.sendfile(__dirname + '/public/index.html');

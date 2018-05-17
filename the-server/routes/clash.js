@@ -25,12 +25,13 @@ router.get("/api/cards/:id", (req, res, next) => {
     result.attackSpeed = 0 + "." + (result.elixirCost * result.order).toString().split("");
     result.image = `http://www.clashapi.xyz/images/cards/${name}.png`;
     if(result.life > result.damage){
-    const receiveDamage = c => {
-      return c.attackMe = c.life - c.damage;
-    }
-    result.attackMe = [];
-      result.attackMe.push(receiveDamage(result));
+      result.attackMe = result.life - result.damage;
       result.attackMe = result.attackMe.toString();
+    // const receiveDamage = c => {
+    //   return c.attackMe = c.life - c.damage;
+    // }
+    // result.attackMe = [];
+    //   result.attackMe.push(receiveDamage(result));
   }
     res.json(result);
   });
