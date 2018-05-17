@@ -2,16 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { SessionService } from '../../../service/session.service';
 import { Router } from '@angular/router';
 import{ FileUploader } from 'ng2-file-upload';
+import { environment }  from '../../../../environments/environment';
 
+const BASEURL:string= environment.BASEURL;
 @Component({
   selector: 'app-auth-signup',
   templateUrl: './auth-signup.component.html',
   styleUrls: ['./auth-signup.component.css']
 })
 export class AuthSignupComponent implements OnInit {
-  BASEURL = 'http://localhost:3000'
   uploader: FileUploader = new FileUploader({
-    url: `${this.BASEURL}/routes/auth/signup`
+    url: `${BASEURL}/routes/auth/signup`
   });
   username: string;
   name: string;
