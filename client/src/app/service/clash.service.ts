@@ -4,8 +4,9 @@ import 'rxjs/add/operator/catch';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import "rxjs";
+import { environment }  from '../../environments/environment';
 
-const BASEURL = "http://localhost:3000";
+const BASEURL:string= environment.BASEURL;
 
 @Injectable()
 export class ClashService {

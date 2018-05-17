@@ -18,7 +18,7 @@ require("./passport")(app);
 const mongoose = require("mongoose");
 mongoose.connect(process.env.DBURL);
 
-const whitelist = ["http://localhost:4200"];
+const whitelist = [process.env.DBURLANGULAR];
 var corsOptions = {
   origin: function(origin, callback) {
     var originIsWhitelisted = whitelist.indexOf(origin) !== -1;
@@ -43,6 +43,7 @@ app.use(passport.session());
 
 app.use(express.static(path.join(__dirname, "public")));
 
+
 // uncomment after placing your favicon in /public
 app.use(logger("dev"));
 app.use(bodyParser.json());
@@ -64,7 +65,7 @@ const Messages = require('./models/Messages')
 app.use('/routes/messages', require('./routes/extendMessages'));
 
 app.use(function(req, res) {
-  res.sendfile(__dirname + '/public/index.html');
+res.sendfile(__dirname + '/public/index.html');
 });
 
 module.exports = app;
