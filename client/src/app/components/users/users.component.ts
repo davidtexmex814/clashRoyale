@@ -10,24 +10,19 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class UsersComponent implements OnInit {
   user: any;
-  mensaje: string;
-
+  // menosyo: any;
   constructor(public SessionService: SessionService, public router: Router, public route: ActivatedRoute) {
     route.params.subscribe(params => {
       SessionService.userr().subscribe(user => {
+        // if(this.SessionService.user._id !== this.user._id) {
+        //    return this.menosyo;
+        //   } else {
+        //     this.menosyo;
+        //   }
         this.user = user;
       });
     });  
   }
   ngOnInit() {
-  }
-  message() {
-    const mensaje = {
-      mensaje: this.mensaje,
-    };
-    this.SessionService.messages(mensaje).subscribe(() => {
-      console.log("entro");
-      this.router.navigate(['/'])
-    })
   }
 }

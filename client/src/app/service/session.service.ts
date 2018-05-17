@@ -26,11 +26,6 @@ export class SessionService {
     this.userEvent.emit(this.user);
     return this.user;
   }
-  messages(mensaje) {
-    return this.http
-      .post(`${BASEURL}/routes/messages/users`, mensaje)
-      .map(res => res.json())
-  }
   signup(user) {
     return this.http
       .post(`${BASEURL}/routes/auth/signup`, user, this.options)

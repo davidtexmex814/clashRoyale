@@ -1,18 +1,18 @@
 <div class="fondo">
-    <div class="searchuser">
-        <div>
-          <h1>Search Users</h1>
-          <input placeholder="Busca a tus Amigos" type="text" [(ngModel)]="username">
-        </div>
-      </div>
-    <div class="users_container">
-  <div *ngFor="let user of user | filter:'username':username" class="user">
-    <div *ngIf="user">
-    <a [routerLink]="['/perfil',user._id]">
-      <h2 class="userName">{{ user.username }}</h2>
-      <img [src]="user.img" alt="">
-    </a>
+  <div class="searchuser">
+    <div>
+      <h1>Search Users</h1>
+      <input placeholder="Busca a tus Amigos" type="text" [(ngModel)]="username">
     </div>
   </div>
-</div>
+  <div class="users_container">
+    <div *ngFor="let user of user | filter:'username':username" class="user">
+      <div *ngIf="user">
+        <a [routerLink]="['/perfil',user._id]">
+          <h2 class="userName">{{ user.username }}</h2>
+          <img [src]="user.img" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
