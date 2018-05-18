@@ -24,6 +24,7 @@ export class PerfilComponent implements OnInit {
     private SessionService : SessionService,
     private router: Router,
     public route: ActivatedRoute) {
+      this.CommentService.commentEvent.subscribe(c=> this.comments.push(c));
     route.params.subscribe(params => {
       SessionService.perfil(params.id).subscribe(user => {
         // this.SessionService.user = user;
@@ -36,7 +37,7 @@ export class PerfilComponent implements OnInit {
     });
   }
   ngOnInit() {
-
+    this.CommentService.commentEvent.subscribe(c=> this.comments.push(c));
   }
   filterComments() {
     this.myComments = this.comments.filter(c => {
@@ -60,6 +61,8 @@ export class PerfilComponent implements OnInit {
     });
     this.comment = "";
   }
+
+
   removeMessages(id) {
     this.CommentService.remove(id).subscribe(() => {
       this.refreshComments();

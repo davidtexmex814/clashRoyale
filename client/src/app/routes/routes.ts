@@ -18,6 +18,7 @@ import { RandomCardsComponent } from '../components/componentClashRoyale/random-
 import { RandomArenasComponent } from '../components/componentClashRoyale/random-arenas/random-arenas.component';
 import { PerfilComponent } from '../components/perfil/perfil/perfil.component';
 import { UsersComponent } from '../components/users/users.component';
+import { ChatglobalComponent } from '../components/chatglobal/chatglobal.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -38,6 +39,7 @@ export const routes: Routes = [
     { path: 'players/:id', component: PlayersdetailsComponent },
     { path: 'leagues', component: LeaguesComponent },
     { path: 'leagues/:id', component: LeaguesdetailsComponent },
+    { path: 'chatglobal', component: ChatglobalComponent },
     { path: '**', redirectTo: '' }
   ];
   

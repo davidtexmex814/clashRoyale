@@ -1,0 +1,19 @@
+<div class="fondo">
+  <div>
+      <!-- <div *ngFor="let user of user" class="user">
+              <h2 class="userName">{{SessionService.user.username}}</h2>
+        </div> -->
+      <div class="messages_container">
+        <div class="blockmesaje">
+          <ul *ngFor="let comment of comments">
+            <p class="elquemandaelmansaje">{{comment.userSender_id.username}}:</p>
+            <li class="text">{{comment.text}}</li>
+          </ul>
+        </div>
+      </div>
+    <div class="dondeescribes">
+      <input [(ngModel)]="comment">
+      <button class="send" (click)="guardaMessages()"> Send Message </button>
+    </div>
+  </div>
+</div>

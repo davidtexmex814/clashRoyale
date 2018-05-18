@@ -30,6 +30,8 @@ import { RandomArenasComponent } from './components/componentClashRoyale/random-
 import { FilterPipe } from './components/componentClashRoyale/cards/pipes/filter.pipe';
 import { PerfilComponent } from './components/perfil/perfil/perfil.component';
 import { UsersComponent } from './components/users/users.component';
+import { ChatService } from './service/chat.service';
+import { ChatglobalComponent } from './components/chatglobal/chatglobal.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,7 @@ import { UsersComponent } from './components/users/users.component';
     FilterPipe,
     PerfilComponent,
     UsersComponent,
+    ChatglobalComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,7 +64,7 @@ import { UsersComponent } from './components/users/users.component';
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [SessionService, ClashService, CommentService],
+  providers: [SessionService, ClashService, CommentService, ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

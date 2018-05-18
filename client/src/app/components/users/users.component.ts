@@ -14,11 +14,6 @@ export class UsersComponent implements OnInit {
   constructor(public SessionService: SessionService, public router: Router, public route: ActivatedRoute) {
     route.params.subscribe(params => {
       SessionService.userr().subscribe(user => {
-        // if(this.SessionService.user._id !== this.user._id) {
-        //    return this.menosyo;
-        //   } else {
-        //     this.menosyo;
-        //   }
         this.user = user;
       });
     });  

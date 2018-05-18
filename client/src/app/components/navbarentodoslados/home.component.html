@@ -111,6 +111,15 @@
             </a>
           </li>
         </ul>
+        <ul class=" menu nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+              <span *ngIf="sessionService.user">
+                  <a  class="users" [routerLink]="['/chatglobal']">Chat Global</a>
+              </span>
+            </a>
+          </li>
+        </ul>
     </div>
   </div>
 </nav>
