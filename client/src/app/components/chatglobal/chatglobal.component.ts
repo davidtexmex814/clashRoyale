@@ -44,7 +44,7 @@ export class ChatglobalComponent implements OnInit {
       this.CommentService.removesglobal().subscribe(() =>{
         this.comments = [];  
         this.comment = "";        
-      })},40000);
+      })},400000000000000000000000000);
   }
   refreshComments(){
     this.CommentService.getGlobal(this.user._id).subscribe((comments) => {
