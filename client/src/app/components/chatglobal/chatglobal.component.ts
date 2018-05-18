@@ -40,11 +40,6 @@ export class ChatglobalComponent implements OnInit {
 
 
   ngOnInit() {
-    setInterval(()=>{
-      this.CommentService.removesglobal().subscribe(() =>{
-        this.comments = [];  
-        this.comment = "";        
-      })},400000000000000000000000000);
   }
   refreshComments(){
     this.CommentService.getGlobal(this.user._id).subscribe((comments) => {
